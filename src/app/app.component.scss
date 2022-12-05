@@ -1,0 +1,14 @@
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: denter;
+
+  a.link {
+    text-decoration: none;
+  }
+}
+
+.active {
+  color: rgb(66, 29, 66);
+}
