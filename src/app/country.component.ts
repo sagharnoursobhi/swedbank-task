@@ -111,10 +111,6 @@ export class CountryCapitalComponent implements OnInit{
         }
       }
     }
-
-    if(this.items.length === 0) {
-      this.btnActive = true;
-    }
   }
 
   private resetAllItems(): void
@@ -175,6 +171,15 @@ export class CountryCapitalComponent implements OnInit{
         status: "normal"
       })
     })
-    console.log(this.items);
+    this.shuffleArray(this.items);
+  }
+
+  shuffleArray(items:any) {
+    for (let i = items.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = items[i];
+      items[i] = items[j];
+      items[j] = temp;
+    }
   }
 }
